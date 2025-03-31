@@ -122,5 +122,49 @@ let isLoggedIn8 = NaN;
 
 // String() function :- The String() function converts the object argument to a string. The String() function can convert different types of values to strings, including numbers, booleans, null, and undefined. If the conversion is not possible, it returns an empty string.
 
-let someNum1 = 69;
+let someNum = 69;
 let someBool = true;
+let someNull = null;
+let someUndefined = undefined;
+
+// let strNum = String(someNum);
+// console.log(someNum);
+// console.log(strNum); // "69"
+// console.log(typeof(strNum));
+// let strBool = String(someBool);
+// console.log(someBool);
+// console.log(strBool); // "true"
+// console.log(typeof(strBool));
+// let strNull = String(someNull);
+// console.log(someNull);
+// console.log(strNull); // "null"
+// console.log(typeof(strNull));
+// let strUndefined = String(someUndefined);
+// console.log(someUndefined);
+// console.log(strUndefined); // "undefined"
+// console.log(typeof(strUndefined));
+
+// ***** Operations *****
+let val = 3;
+console.log(val);
+let negVal = -val;
+console.log(negVal); // -3
+
+let str1 = "Hello";
+let str2 = " World";
+let str3 = str1 + str2;
+console.log(str3); // Hello World
+
+// The problamatic part
+console.log("1" + 2);
+console.log("1" + 2 + 2);
+console.log(1 + "2");
+console.log("1" + "2");
+console.log(1 + 2 + "2");
+// This happens because JS engine automatically converts the other part as string if it gets string in the first part.
+// So, the + operator is used for both addition and concatenation in JavaScript.
+// If the first operand is a string, the second operand is converted to a string and concatenated.
+
+console.log(true);
+console.log(+true);
+console.log(+"");
