@@ -29,6 +29,11 @@ let noVal = null; // null
 let undef = undefined; // undefined
 let sym = Symbol("foo"); // symbol
 
+// Symbol always returns a unique value
+let sym1 = Symbol("foo");
+let sym2 = Symbol("foo");
+console.log(sym1 === sym2); // false
+
 // To check the datatype of a variable we can use 'typeof' operator
 console.log(typeof num); // number
 console.log(typeof str); // string
@@ -37,3 +42,25 @@ console.log(typeof bool); // boolean
 console.log(typeof noVal); // object
 console.log(typeof undef); // undefined
 console.log(typeof sym); // symbol
+
+// Reference Datatypes(Non-Primitive)
+
+// Array, Object, Function
+// Array
+let heros = ["Thor", "Ironman", "Hulk"];
+
+// Object
+let user = {
+    name: "John",
+    age: 30,
+    isAdmin: true
+}
+
+// Function
+const greet = function greet() {
+    console.log("Hello World!");
+}
+
+console.log(typeof heros); // object
+console.log(typeof user); // object
+console.log(typeof greet); // function
