@@ -51,7 +51,7 @@ let heros = ["Thor", "Ironman", "Hulk"];
 
 // Object
 let user = {
-    name: "John",
+    name: "John Cena",
     age: 30,
     isAdmin: true
 }
@@ -64,3 +64,27 @@ const greet = function greet() {
 console.log(typeof heros); // object
 console.log(typeof user); // object
 console.log(typeof greet); // function
+
+// ====================================
+
+// Stack (Primitive) & Heap (Non-Primitive)
+
+let num1 = 100;
+let num2 = num1;
+num2 = 50;
+console.log(num1);
+console.log(num2);
+// This will not change the value in num1 because the value stored in num1 will not go as the original form in num2 but its copy will be given to num2, so all the changes will be done in the copy of the value and not in the original value of num1.
+
+let userOne = {
+    name: "Vaibhav",
+    email: "singh@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne;
+userTwo.name = "John Doe";
+console.log(userOne.name);
+console.log(userTwo.name);
+// This will change the value in userOne because the reference of userOne is passed to userTwo, so all the changes will be done in the original value of userOne and not in the copy of the value of userTwo.
+// So, in the case of non-primitive data types, the reference is passed and not the copy of value.
